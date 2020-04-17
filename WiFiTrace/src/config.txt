@@ -1,0 +1,3 @@
+%% Enter the path to data directory here: eg idir=/Users/elmo/Desktop/WiTrace/data/
+%% Do Not add any lines above. Only change the value of idir in the below line
+idir=

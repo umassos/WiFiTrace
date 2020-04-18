@@ -8,7 +8,7 @@ WiFiTrace is an open-source project led by Computer Science researchers at the U
 The tool and algorithm leverages our prior expertise in mobility modeling and modeling mobile trajectories to efficiently perform these computations on syslog WiFi data.
 
 # Website
-WiFiTrace Website is at : http://wifitrace.github.io/
+WiFiTrace Website is at : http://wifitrace.github.io/  
 Refer the website for User, Developer Manuals and more.
 
 # Installation and Usage

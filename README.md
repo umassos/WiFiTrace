@@ -7,6 +7,10 @@ WiFiTrace is an open-source project led by Computer Science researchers at the U
 
 The tool and algorithm leverages our prior expertise in mobility modeling and modeling mobile trajectories to efficiently perform these computations on syslog WiFi data.
 
+# Website
+WiFiTrace Website is at : http://wifitrace.github.io/
+Refer the website for User, Developer Manuals and more.
+
 # Installation and Usage
 ## Sections
 - [Dependencies & Installation](https://github.com/WiFiTrace/WiFiTrace.github.io/blob/master/installation.md#dependencies-and-installation)
@@ -116,17 +120,38 @@ Field Description:
     
     
 ## Usage
-### Contact Tracing Tool:
+### WiFiTrace (Contact Tracing Tool):
 
+python main.py -m <\mac id\> -s \<start date YYYYMMDD \> -e \<end date YYYYMMDD \> -w \<pathogen active window size\> -l \<minimum session length (in mins) of the infected patient\>
+
+where:  
+m - mac id of the infected patient  
+s - This is the date from when you want to perform contact tracing  
+e - This is the date till when you want to perform contact tracing  
+w - Time in hours for which the pathogen is active, if you want to perform contact tracing to identify users who visited the location after the departure of the infected person when the pathogens spread by the infected person are still alive. Default value 0, indicating the infected person and other users should be co-located at the same place and at the same time.  
+l - Minimum time in mins spend by the infected person at a location. Default value 0, indicating consider all locations visited by the infected person irrespective of the time spend at each location.  
+
+Also, **change the value of parameter idir in config.text file to indicate the location of all input session files.**
+
+**For Example:**
+
+* To generate the contact trace for a mac_id "0x-DE-AD-BE-EF” for dates starting from 19-Jan-2020 till 24-Jan-2020 and the pathogen active window is 2 hrs (time window for which the pathogen is active even after the infected patient leaves the location) and the infected person must have spend atleast 5 mins at each location, we would run the python script as below:
+
+    python main.py -m "0x-DE-AD-BE-EF" -s 20200119 -e 20200124 -w 1 -l 5  
+
+    If you want strict co-location then, enter window size as 0 ( -w 0 )  
+
+If the input sessions files are at /Users/foo/, change idir value in config.txt to
+idir=/Users/foo/
 
 ### Preprocessor (Syslog to Session File):
 
-main.py -y \<YYYY\> -i \<input\> -o \<output\>
+python main.py -y \<YYYY\> -i \<input\> -o \<output\>
 
-where:
-i - input syslog file name or directory (if multiple files to be preprocessed)
-o - output file name or directory
-y - Year (YYYY format) of the syslog file passed in -i, default is current year
+where:  
+i - input syslog file name or directory (if multiple files to be preprocessed)  
+o - output file name or directory  
+y - Year (YYYY format) of the syslog file passed in -i, default is current year  
 
 **Note:**
 1. If Output file parameter -o option is a directory then the outfile is saved as a <input_filename>_sessions.csv

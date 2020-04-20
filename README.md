@@ -29,6 +29,6 @@ The processor code processes raw networking monitoring logs/data to extract AP a
 
 The main tool then ingests this data in a standard format and  generates contact tracing reports  it based on a specified user or a device MAC address. The output report can be in human-readable text or JSON format.
 
-Additional details on tool installation, data formats, and a user guide can be found the USER-GUIDE.md
+Additional details on tool installation, data formats, and a user guide can be found in the [User Guide] (https://github.com/umassos/WiFiTrace/blob/master/USER-GUIDE.md)
  
 

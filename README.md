@@ -45,7 +45,7 @@ The code works with Python 3.7 and is also Python 2.7 compatible. You need to in
   * [Pandas](https://pandas.pydata.org/pandas-docs/stable/getting_started/install.html)
   * datetime, os, ast, sys, get_opt are all part of python’s standard library.
   
-## Code can be found [here](https://github.com/umassos/WiFiTrace)
+
   
 ## Directory Structure and File Name Format
 

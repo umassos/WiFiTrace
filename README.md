@@ -16,12 +16,18 @@ WiFiTrace uses Access Point (AP) association and disassociation information from
 
 ## Differences with bluetooth-based approaches
 
-WiFiTrace is a complementary approach to bluetooth-based methods for contact tracing. It does not require any app to be downloaded by users to their phones. It is a network-centric approach that uses the network's view of users to infer their locations. WiFiTrace only works with enterprise WiFi networks and is primarily designed for large indoor environments (campuses, office buildings, shopping malls).  
+WiFiTrace is a complementary approach to bluetooth-based methods for contact tracing. It does not require any app to be downloaded by users to their phones, nor does it require any data to be recorded on the user's device.
 
-Unlike bluetooth methods, it will not work outdoors (unless there is WiFi covrage in those outdoor areas).  It will also not work with consumer-grade WiFi devices such as ones deployed at home, since it assumes RADIUS authentication used by enterprise WiFi to associate a device to a specific user. 
+It is a network-centric approach that uses the network's view of users to infer their locations. WiFiTrace only works with enterprise WiFi networks and is primarily designed for large indoor environments with WiFi coverage (campuses, office buildings, shopping malls).  It does not work with most consumer-grade WiFi routers, such as ones deployed at home, since it assumes RADIUS authentication to associate a device to a specific user. 
+
+It is designed for indoor contact tracing, and unlike bluetooth methods, it does not work outdoors (unless there is WiFi covrage in those outdoor areas).  
 
 ## Design of WiFiTrace 
 
+The tool uses a modular architecture to make it compatible with WiFi devices from different networking vendors. 
+The processor code processes raw networking monitoring logs/data to extract AP association/disassociation information and outputs it to a standard data format.  Currently, we provide a pre-processor for syslogs produced for HP/Aruba WiFi devices. Support for other vendors is a work in progress.  The output data format is fully documented so that others can write/contribute pre-processing scripts for other vendors.
+
+The main tool then ingests this data in a standard format and  generates contact tracing reports  it based on a specified user or a device MAC address. The output report can be in human-readable text or JSON format.
 
 
  

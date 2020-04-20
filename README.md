@@ -33,5 +33,7 @@ Additional details on tool installation, data formats, and a user guide can be f
 [User Guide](https://github.com/umassos/WiFiTrace/blob/master/USER-GUIDE.md)
  
 
-The design of this tool leverages our research expertise in characterizing and modeling the mobility of users. A recent technical publication describing our mobility characterization and modeling research is available on 
-[arxiv](https://arxiv.org/abs/2003.08512).  A research publication desribing this network-centric WiFi-based contact tracing method is a work in progress and  will be availble here soon.
+The design of this tool leverages our research expertise in characterizing and modeling the mobility of users. A recent technical publication titled "Empirical Characterization of Mobility of Multi-Device Internet Users" describes our mobility characterization and modeling research and is available on 
+[arxiv](https://arxiv.org/abs/2003.08512) 
+
+A research publication desribing the network-centric WiFi-based contact tracing method used by WiFiTrace is a work in progress and  will be availble here soon.

@@ -6,7 +6,7 @@
 - [Directory Structure & File Name Format](https://github.com/umassos/WiFiTrace/blob/master/USER-GUIDE.md#directory-structure-and-file-name-format)
 - [Data Format](https://github.com/umassos/WiFiTrace/blob/master/USER-GUIDE.md#data-format)
 - [Example Usage](https://github.com/umassos/WiFiTrace/blob/master/USER-GUIDE.md#usage)
-- [Reports]()
+- [Reports](https://github.com/umassos/WiFiTrace/blob/master/USER-GUIDE.md#reports)
 - [References](https://github.com/umassos/WiFiTrace/blob/master/USER-GUIDE.md#references)
 
 ## Dependencies and Installation

@@ -6,6 +6,7 @@
 - [Directory Structure & File Name Format](https://github.com/umassos/WiFiTrace/blob/master/USER-GUIDE.md#directory-structure-and-file-name-format)
 - [Data Format](https://github.com/umassos/WiFiTrace/blob/master/USER-GUIDE.md#data-format)
 - [Example Usage](https://github.com/umassos/WiFiTrace/blob/master/USER-GUIDE.md#usage)
+- [Reports]()
 - [References](https://github.com/umassos/WiFiTrace/blob/master/USER-GUIDE.md#references)
 
 ## Dependencies and Installation
@@ -137,4 +138,27 @@ will process the syslog file present at location /data/20190111_syslog and creat
 
 2. If Input parameter is a directory then the script processes all syslog files in the directory that haven't been processed earlier and generates the corresponding session output files.
 
-### References
+## Reports
+
+WiFiTrace generates 2 reports:
+1. Patient Report
+2. User Report
+
+The format of the report can be txt or JSON based on the input parameter (-f) supplied when calling WIFITrace. If the parameter is not supplied by default the reports are saved as text file.
+
+### Description of Reports
+**Patient Report**  
+Patient Report describes the list of locations visited and time of visit by the patient from the start date till the end date. Each row of the report gives the date, start time of visit(24 hr clock format), end time of visit(24 hr clock format), Location details and Duration of visit(in mins).
+
+**User Report**  
+The User report provides details about the users co-located with the patient between the start date and the end date.  The user report has 2 sections Summary section and Detailed report section.  
+
+The Summary section provides a count of total co-locators as well as a list of all Mac IDs along with the duration of co-location of each Mac ID with the infected person.  
+
+The Detail report section provides a co-location details of each mac id with the infected person - listing the date, start time(24 hr clock format) of co-location, end time(24 hr clock format) of co-location, Location details and duration of co-location.
+
+## References
+The design of this tool leverages our research expertise in characterizing and modeling the mobility of users. A recent technical publication titled "Empirical Characterization of Mobility of Multi-Device Internet Users" describes our mobility characterization and modeling research and is available on 
+[arxiv](https://arxiv.org/abs/2003.08512) 
+
+A research publication desribing the network-centric WiFi-based contact tracing method used by WiFiTrace is a work in progress and  will be availble here soon.

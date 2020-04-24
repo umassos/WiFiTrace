@@ -1,33 +1,13 @@
-"""
-BSD 3-Clause License
-
-Copyright (c) 2020, UMass Laboratory for Advanced Systems Software All rights reserved.
-
-Redistribution and use in source and binary forms, with or without modification, 
-are permitted provided that the following conditions are met:
-
-    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-
-    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following 
-    disclaimer in the documentation and/or other materials provided with the distribution.
-
-    Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products 
-    derived from this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, 
-INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
-IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
-CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, 
-DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, 
-STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
-EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-"""
-
+#############################################################################################
 # Author : Amee Trivedi
-# Objective : This file has functions needed to extract session information from
+#
+#  Objective : This file has functions needed to extract session information from
 # the presence events.
+#
 # Input file is from the /data/presence_msg/<date>_presence.txt
+#
 # Output file is a csv file with  main columns named "<date>_session_event_ap.csv"
+#############################################################################################
 
 # Imports
 import pandas as pd
@@ -165,7 +145,7 @@ def extract_session_items(infile):
                     except:
                         ap_ip.append("-1")
 
-                elif event == "501080" or event == "501081" or event == "501106":
+                elif event in ["501080", "501081", "501106"]:
 
                     # All events have common substring "[mac:%m]: Ageout AP [ip:%P]-[bssid:%m]-[name:%s]"
                     # For eg:
@@ -195,18 +175,11 @@ def extract_session_items(infile):
                     except:
                         ap_ip.append("-1")
 
-                elif event == "501009" or event == "501110" or event == "501111" or event == "501093"\
-                        or event == "501094" or event == "501099" or event == "501109" \
-                        or event == "501101" or event == "501102" or event == "501104" \
-                        or event == "501112" or event == "501113" or event == "501100" \
-                        or event == "501107" or event == "501108" or event == "501114"\
-                        or event == "501117" or event == "501126" or event == "501129"\
-                        or event == "501130" or event == "501128" or event == "501105" \
-                        or event == "501118" or event == "501119" or event == "501120"\
-                        or event == "501121" or event == "501122" or event == "501123"\
-                        or event == "501124" or event == "501125" or event == "501127"\
-                        or event == "501130" or event == "501082" or event == "501085"\
-                        or event == "501090":
+                elif event in ["501009", "501110", "501111","501093","501094", "501099", "501109"
+                            ,"501101" ,"501102","501104" ,"501112", "501113", "501100" ,"501107" , "501108"
+                            ,"501114", "501117" ,"501126","501129","501130", "501128" ,"501105" ,"501118"
+                            ,"501119","501120" ,"501121" ,"501122" ,"501123","501124" ,"501125"
+                            ,"501127" ,"501130", "501082" ,"501085", "501090"]:
 
                     # All events have common substring "[mac:%m]: AP [ip:%P]-[bssid:%m]-[name:%s]"
                     # For eg:
@@ -266,8 +239,7 @@ def extract_session_items(infile):
                     except:
                         ap_ip.append("-1")
 
-                elif event == "501097" or event == "501092" or event == "501084" or event == "501087"\
-                        or event == "501088" or event == "501089":
+                elif event in ["501097", "501092","501084","501087", "501088", "501089"]:
 
                     # All events have common substring "[mac:%m]: Dropped AP [ip:%P]-[bssid:%m]-[name:%s]"
                     # For eg:

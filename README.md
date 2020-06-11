@@ -36,4 +36,4 @@ Additional details on tool installation, data formats, and a user guide can be f
 The design of this tool leverages our research expertise in characterizing and modeling the mobility of users. A recent technical publication titled "Empirical Characterization of Mobility of Multi-Device Internet Users" describes our mobility characterization and modeling research and is available on 
 [arxiv](https://arxiv.org/abs/2003.08512) 
 
-A research publication describing the network-centric WiFi-based contact tracing method used by WiFiTrace is a work in progress and will be available here soon.
+Our research publication describing the network-centric WiFi-based contact tracing method used by WiFiTrace can be found here: [WiFiTrace: Network-based Contact Tracing for Infectious Diseases Using Passive WiFi Sensing](https://arxiv.org/abs/2005.12045v2)

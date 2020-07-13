@@ -7,10 +7,8 @@ WiFiTrace is an open-source project led by Computer Science researchers at the U
 The tool and algorithm leverage our prior expertise in mobility modeling and modeling mobile trajectories to efficiently perform these computations on syslog WiFi data.
 
 ## Citation
-<div class="bg-blue-light mb-2">
   If you use any part of the code, please cite the following publication:
  [WiFiTrace: Network-based Contact Tracing for Infectious Diseases Using Passive WiFi Sensing](https://arxiv.org/abs/2005.12045)
-</div>
 
 ## How it works
 

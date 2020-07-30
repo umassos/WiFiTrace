@@ -127,7 +127,9 @@ def valid_args(patient_mac, numdays, date):
     month = int(date[4:6])
     date_val = int(date[6:])
 
+    """
     if (year > 2015) and (year < 2020):
+    """
         if (month > 0) and (month < 13):
             if (date_val > 0) and (date_val < 31):
                 date_flag = True
@@ -135,8 +137,10 @@ def valid_args(patient_mac, numdays, date):
                 print(">> Invalid date of the month \n")
         else:
             print(">> Invalid month of the year \n")
+    """
     else:
         print(">> Year not present in the WiFi log database \n")
+    """
 
     if (patient_mac_flag and numdays_flag and date_flag):
         return_flag = True

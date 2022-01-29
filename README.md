@@ -43,3 +43,7 @@ The design of this tool leverages our research expertise in characterizing and m
 [arxiv](https://arxiv.org/abs/2003.08512) 
 
 Our research publication describing the network-centric WiFi-based contact tracing method used by WiFiTrace can be found here: [WiFiTrace: Network-based Contact Tracing for Infectious Diseases Using Passive WiFi Sensing](https://arxiv.org/abs/2005.12045v2)
+
+## Acknowledgements 
+
+This research was supported by NSF grants 1763834 and 1836752. 
